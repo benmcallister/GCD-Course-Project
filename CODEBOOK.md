@@ -1,6 +1,8 @@
+
+
+## Variables in this data set
 The following are the variable names included in the tidy data set "GCD_Course_Project_Tidy_Data_bmca.txt"
 
-## Variables
  [1] "subject"                           "activity"                         
  [3] "tbodyaccmeanx"                     "tbodyaccmeany"                    
  [5] "tbodyaccmeanz"                     "tbodyaccstdx"                     
@@ -45,6 +47,9 @@ The following are the variable names included in the tidy data set "GCD_Course_P
 [83] "angletbodyaccjerkmeangravitymean"  "angletbodygyromeangravitymean"    
 [85] "angletbodygyrojerkmeangravitymean" "anglexgravitymean"                
 [87] "angleygravitymean"                 "anglezgravitymean"
+
+## Units
+All data has been divided by its range to normalize it. So all variables in this data set are averages of ratios and therefore have no units. 
 
 ## What do these variables represent? 
 The first two variables "subject" and "activity" are identifiers. Subjects (people) are represented by integers from 1-30 and activities (what the people were doing when the original measurements were taken) are represented with descriptions such as "WALKING" or "SITTING".
