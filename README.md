@@ -5,8 +5,7 @@ Course Project for Getting and Cleaning Data
 Ben McAllister
 
 ## The assignment output: tidy data set.
-In this repo, the file "GCD_Course_Project_Tidy_Data_bmca.txt" contains a tidy dataset. This data set is tidy because every row contains one observation, and every column contains one variable. There are two identifying variables: "subject" and "activity" and 86 measurements. Each measurement is actually the average of all measurements captured for a given subject/activity combination in the [original study][2]. Furthermore, while the original study included over 500 variables, the means in this dataset are derived from a subset of the original variables (described below in Part 2). Despite the fact that these are all average values, I have used a very similar name as was used in the source data for the original measurements, for brevity's sake. Other wise, I might have added a prefix of 
-"meanof" to each variable name.
+In this repo, the file "GCD_Course_Project_Tidy_Data_bmca.txt" contains a tidy dataset. This data set is tidy because every row contains one observation, and every column contains one variable. There are two identifying variables: "subject" and "activity" and 86 measurements. Each measurement is actually the average of all measurements captured for a given subject/activity/measurement combination in the [original study][2]. Furthermore, while the original study included over 500 variables, the means in this dataset are derived from a subset of the original variables (described below in Part 2). Despite the fact that these are all average values, I have used a very similar name as was used in the source data for the original measurements, for brevity's sake. Other wise, I might have added a prefix of "meanof" to each variable name. But this seemed unnecessarily verbose, given the already long variable names.
 
 When reading this file, be aware that it contains a header, so please pass the header=TRUE argument when using read.table. 
    
@@ -48,6 +47,7 @@ Descriptive activity names were substituted by creating a new variable called "a
 This step was described in step one, above. I made the assumption that the original variable names, as provided by the original source were sufficiently descriptive. For more detail on the variable names, see "features_info.txt", which is included in the original data set. 
 
 ### PART 5: Create a second, independent tidy data set with the average of each variable for each activity and each subject.
+A second tidy data set was created using the melt() and dcast() functions. The name of the file containing the data set is "GCD_Course_Project_Tidy_Data_bmca.txt".
 
 
 
@@ -55,4 +55,5 @@ This step was described in step one, above. I made the assumption that the origi
 [2]: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones    "original data source"
 
 Citation for data source: 
+
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
