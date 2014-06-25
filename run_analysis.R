@@ -44,7 +44,7 @@ activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt")
 colnames(activityLabels) <- c("index", "activity")
 
 ## use descriptive names to names the activities in the data set
-subset$activity = activityLabels[exp$test, 2]
+subset$activity = activityLabels[subset$test, 2]
 ## reorder columns
 subset <- subset[c(1, 89, 3:88)]
 
